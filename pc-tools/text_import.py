@@ -8,6 +8,7 @@ from cStringIO import StringIO
 def getText():
     a_list = []
     base_str = u" !\"#$%　'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[＼]^_`abcdefghijklmnopqrstuvwxyz{|}~、。，．·：？！々ーー－／～…‘’“”（）［］「」『』【】＋－×＜＞％＆○□△※→←↑↓０１２３４５６７８９ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ"
+    jis_str = u"ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶー"
     fl = os.listdir("cn-text")
     for fn in fl:
         fp = codecs.open("cn-text//%s" % fn, "rb", "utf-16")
@@ -15,13 +16,15 @@ def getText():
         for char in data:
             if char in base_str:
                 pass
+            elif char in jis_str:
+                pass
             elif char in a_list:
                 pass
             else:
                 a_list.append(char)
         fp.close()
     dest = codecs.open("charlist.txt", "wb", "utf-16")
-    dest.write("".join(a_list))
+    dest.write(jis_str + "".join(a_list))
     dest.close()
 
 
