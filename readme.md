@@ -2,6 +2,7 @@
 yamawari:night alone chinese translation project
 
 >>[目前进度]
+
 Steam版对话 -- 100%
 
 Steam版道具 -- 0%
