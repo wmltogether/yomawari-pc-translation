@@ -20,8 +20,8 @@ namespace NISFONTBuilder
         public static int fontHeight = 28;
         public static int fontSize = 36;
         public static string ttfName = "font.ttf";
-        public static int texture_width = 1024;
-        public static int texture_height = 1024;
+        public static int texture_width = 2048;
+        public static int texture_height = 2048;
         public static uint unk0 = 0;
         public static uint unk1 = 0;
         public static uint unk2 = 0;
@@ -106,7 +106,7 @@ namespace NISFONTBuilder
                     int _fontSize = Convert.ToInt16(par[5]);
                     
                     string chars = ReadFromFile(_charmap);
-                    int _texture_width = 1024;
+                    int _texture_width = 2048;
                     int a2 = _texture_width / _fontWidth;
                     int t1 = chars.Length / a2;
                     int t2 = chars.Length % a2;

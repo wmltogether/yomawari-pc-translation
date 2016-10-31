@@ -113,7 +113,7 @@ namespace NISFONTBuilder
             int tile_w = Config.fontWidth;
             int tile_h = Config.fontHeight;
             int relativePositionX = 1;
-            int relativePositionY = -2;
+            int relativePositionY = -4;
             int font_height = Config.fontSize;
             Library library = new Library();
             string facename = Config.ttfName;
